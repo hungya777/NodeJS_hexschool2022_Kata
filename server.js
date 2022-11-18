@@ -72,7 +72,7 @@ const requestListener = async(req, res) =>{
     }catch(err){
       errorHandle(res, err);
     }
-  }else if(req.url == "/rooms" && req.method == "OPTIONS"){ //cors跨網域
+  }else if(req.method == "OPTIONS"){ //cors跨網域
     res.writeHead(200, headers);
     res.end();
   }else {
